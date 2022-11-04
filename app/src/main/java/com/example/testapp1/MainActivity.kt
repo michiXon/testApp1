@@ -3,6 +3,7 @@ package com.example.testapp1
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.RecyclerView
+import com.android.volley.toolbox.Volley
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,5 +18,8 @@ class MainActivity : AppCompatActivity() {
 
         val recyk: RecyclerView = this.findViewById<RecyclerView>(R.id.recyk)
         recyk.adapter=MyAdapter(lista)
+        var url = "http://127.0.0.1:8080/api/users"
+        val queque = Volley.newRequestQueue(this);
+
     }
 }
